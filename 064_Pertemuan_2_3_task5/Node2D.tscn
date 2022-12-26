@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://task5.gd" type="Script" id=1]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="attributeGaris" type="ColorRect" parent="."]
+margin_right = 840.0
+margin_bottom = 480.0
+color = Color( 0, 0, 0, 1 )
+script = ExtResource( 1 )
+
+[node name="Button" type="Button" parent="attributeGaris"]
+margin_left = 239.0
+margin_top = 433.0
+margin_right = 643.0
+margin_bottom = 463.0
+text = "Tekan Tombol Untuk Menampilkan Garis"
+
+[connection signal="pressed" from="attributeGaris/Button" to="attributeGaris" method="_on_Button_pressed"]

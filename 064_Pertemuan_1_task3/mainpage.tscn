@@ -1,0 +1,107 @@
+[gd_scene load_steps=18 format=2]
+
+[ext_resource path="res://Montserrat-ExtraBold.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://backbutton.jpg" type="Texture" id=2]
+[ext_resource path="res://2107.w026.n002.629B.p1.629.jpg" type="Texture" id=3]
+[ext_resource path="res://ButtonBack2.gd" type="Script" id=4]
+[ext_resource path="res://warrior spritesheet calciumtrice.png" type="Texture" id=5]
+
+[sub_resource type="DynamicFont" id=1]
+size = 250
+font_data = ExtResource( 1 )
+
+[sub_resource type="AtlasTexture" id=2]
+flags = 4
+atlas = ExtResource( 5 )
+region = Rect2( 0, 64, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=3]
+flags = 4
+atlas = ExtResource( 5 )
+region = Rect2( 32, 64, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=4]
+flags = 4
+atlas = ExtResource( 5 )
+region = Rect2( 64, 64, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=5]
+flags = 4
+atlas = ExtResource( 5 )
+region = Rect2( 96, 64, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=6]
+flags = 4
+atlas = ExtResource( 5 )
+region = Rect2( 128, 64, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=7]
+flags = 4
+atlas = ExtResource( 5 )
+region = Rect2( 160, 64, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=8]
+flags = 4
+atlas = ExtResource( 5 )
+region = Rect2( 192, 64, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=9]
+flags = 4
+atlas = ExtResource( 5 )
+region = Rect2( 224, 64, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=10]
+flags = 4
+atlas = ExtResource( 5 )
+region = Rect2( 256, 64, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=11]
+flags = 4
+atlas = ExtResource( 5 )
+region = Rect2( 288, 64, 32, 32 )
+
+[sub_resource type="SpriteFrames" id=12]
+animations = [ {
+"frames": [ SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_left = -32.0
+margin_top = -3.0
+margin_right = 6677.0
+margin_bottom = 2681.0
+rect_scale = Vector2( 0.158, 0.225094 )
+texture = ExtResource( 3 )
+
+[node name="Label" type="Label" parent="TextureRect"]
+margin_left = 2462.03
+margin_top = 253.228
+margin_right = 4234.03
+margin_bottom = 866.228
+custom_fonts/font = SubResource( 1 )
+text = "MAIN PAGE
+"
+
+[node name="Button" type="Button" parent="."]
+margin_left = 370.0
+margin_top = 454.0
+margin_right = 604.0
+margin_bottom = 524.0
+icon = ExtResource( 2 )
+icon_align = 1
+expand_icon = true
+script = ExtResource( 4 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 474, 341 )
+scale = Vector2( 7.875, 6.1875 )
+frames = SubResource( 12 )
+frame = 9
+playing = true
+
+[connection signal="pressed" from="Button" to="Button" method="_on_Button_pressed"]

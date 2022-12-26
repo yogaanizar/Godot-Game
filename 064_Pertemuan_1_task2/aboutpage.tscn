@@ -1,0 +1,61 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Montserrat-ExtraBold.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://backbutton.jpg" type="Texture" id=2]
+[ext_resource path="res://2107.w026.n002.629B.p1.629.jpg" type="Texture" id=3]
+[ext_resource path="res://Buttonback.gd" type="Script" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 250
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 100
+font_data = ExtResource( 1 )
+
+[node name="Node2D" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_left = -32.0
+margin_top = -3.0
+margin_right = 6677.0
+margin_bottom = 2681.0
+rect_scale = Vector2( 0.158, 0.225094 )
+texture = ExtResource( 3 )
+
+[node name="Label" type="Label" parent="TextureRect"]
+margin_left = 2462.03
+margin_top = 253.228
+margin_right = 4234.03
+margin_bottom = 866.228
+custom_fonts/font = SubResource( 1 )
+text = "ABOUT PAGE
+"
+
+[node name="Label2" type="Label" parent="TextureRect"]
+margin_left = 1430.38
+margin_top = 737.47
+margin_right = 5815.38
+margin_bottom = 1868.47
+custom_fonts/font = SubResource( 2 )
+text = "NAMA : YOGA NIZAR HABIBULLOH 
+NIM : 201511064
+KELAS : D3-3B JTK 
+
+CARA PENGGUNAAN APLIKASI  : 
+1. PERTAMA - TAMA USER AKAN DIARAHKAN PADA WELCOME PAGE
+2. JIKA MENGKLIK BUTTON ABOUT PAGE MAKA AKAN MENUJU HALAMAN ABOUT 
+3. JIKA MENGKLIK BUTTON MAIN PAGE MAKA AKAN MENUJU HALAMAN MAIN
+"
+
+[node name="Button" type="Button" parent="."]
+margin_left = 370.0
+margin_top = 454.0
+margin_right = 604.0
+margin_bottom = 524.0
+icon = ExtResource( 2 )
+icon_align = 1
+expand_icon = true
+script = ExtResource( 4 )
+
+[connection signal="pressed" from="Button" to="Button" method="_on_Button_pressed"]

@@ -1,0 +1,37 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://examples/colorful_font/colorful_font.tres" type="BitmapFont" id=1]
+[ext_resource path="res://ButtonBack2.gd" type="Script" id=2]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 4.0
+margin_bottom = 4.0
+
+[node name="Label" type="Label" parent="."]
+margin_left = 394.0
+margin_top = 269.0
+margin_right = 615.0
+margin_bottom = 303.0
+custom_fonts/font = ExtResource( 1 )
+text = "INI MAIN PAGE"
+
+[node name="Button" type="Button" parent="."]
+margin_left = 685.0
+margin_top = 479.0
+margin_right = 997.0
+margin_bottom = 560.0
+script = ExtResource( 2 )
+
+[node name="Label" type="Label" parent="Button"]
+anchor_right = 0.434
+margin_left = 108.0
+margin_top = 22.0
+margin_right = 172.592
+margin_bottom = 93.0
+custom_fonts/font = ExtResource( 1 )
+text = "BACK
+"
+
+[connection signal="pressed" from="Button" to="Button" method="_on_Button_pressed"]

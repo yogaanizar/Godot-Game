@@ -1,0 +1,93 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://064_Pertemuan_3_4_task1/About.gd" type="Script" id=2]
+[ext_resource path="res://Font/Villages.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://Font/Silkscreen-Bold.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://Font/Silkscreen-Regular.ttf" type="DynamicFontData" id=5]
+
+[sub_resource type="StreamTexture" id=4]
+flags = 4
+load_path = "res://.import/bekgron.png-2af70af4460626e54fb2f2ea8ff0693a.stex"
+
+[sub_resource type="DynamicFont" id=1]
+size = 72
+outline_size = 3
+outline_color = Color( 0.356863, 0, 0, 1 )
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 70
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 40
+outline_size = 3
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 25
+font_data = ExtResource( 5 )
+
+[node name="About" type="Control"]
+script = ExtResource( 2 )
+
+[node name="Nature-game-background-landscape-vector" type="Sprite" parent="."]
+position = Vector2( 515.99, 299.284 )
+scale = Vector2( 0.532302, 0.516028 )
+texture = SubResource( 4 )
+
+[node name="About" type="Label" parent="Nature-game-background-landscape-vector"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -572.266
+margin_top = -468.307
+margin_right = -431.266
+margin_bottom = -396.307
+custom_fonts/font = SubResource( 1 )
+text = "About"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Lorem" type="Label" parent="Nature-game-background-landscape-vector/About"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -1018.05
+margin_top = -647.092
+margin_right = 152.957
+margin_bottom = -318.091
+rect_pivot_offset = Vector2( 668.793, 236.421 )
+custom_fonts/font = SubResource( 2 )
+text = "Yoga Nizar Habibulloh
+D3-3B
+201511064"
+align = 1
+valign = 1
+
+[node name="Label" type="Label" parent="Nature-game-background-landscape-vector/About"]
+margin_left = -985.12
+margin_top = -186.696
+margin_right = 914.88
+margin_bottom = 14.3036
+custom_fonts/font = SubResource( 5 )
+text = "cara penggunaan aplikasi :
+- Pilih button pada menu awal untuk menampilkan projek 
+-pilih button back untuk ke halaman sebelumnya"
+
+[node name="goBack" type="Button" parent="."]
+margin_left = 465.0
+margin_top = 521.0
+margin_right = 570.0
+margin_bottom = 575.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "Back"
+
+[connection signal="pressed" from="goBack" to="." method="_buttonBack"]

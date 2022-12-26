@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Fools Gold.mp3-63ed1914c1172da36c4f7cbfb7b58380.mp3str"
+
+[deps]
+
+source_file="res://Fools Gold.mp3"
+dest_files=[ "res://.import/Fools Gold.mp3-63ed1914c1172da36c4f7cbfb7b58380.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

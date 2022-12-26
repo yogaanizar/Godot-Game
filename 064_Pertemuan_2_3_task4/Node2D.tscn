@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://animasiGeometrik.gd" type="Script" id=1]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="animasiGeometrik" type="ColorRect" parent="."]
+margin_right = 840.0
+margin_bottom = 480.0
+color = Color( 0, 0, 0, 1 )
+script = ExtResource( 1 )
+
+[node name="Button" type="Button" parent="."]
+margin_left = 300.0
+margin_top = 445.0
+margin_right = 546.0
+margin_bottom = 473.0
+text = "TEKAN UNTUK MENAMPILKAN GARIS"
+
+[connection signal="pressed" from="Button" to="animasiGeometrik" method="_on_Button_pressed"]
