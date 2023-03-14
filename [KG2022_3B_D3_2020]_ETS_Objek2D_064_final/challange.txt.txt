@@ -1,0 +1,7 @@
+Pada pertemuan hari ini, saya mengubah objek utama yang bergerak,
+dimana sebelumnya saya menggerakan objek kura-kura, sekarang saya 
+membuat objek ikan, dan melakukan pergerakan translasi untuk pergerakan
+zig zag dari ikan tersebut. saya mencoba untuk mengaplikasikan
+pergerakan translasi yang jika bersentuhan dengan objek lain maka skala dari objek tersebut akan 
+berubah baik membesar maupun mengecil, awalnya saya menambahkan objek batas laut untuk menjadi objek tumpuan ketika kura-kura ataupun ikan menyentuh atau
+melewati batas laut, kura-kura dan ikan akan menjadi mengecil, akan tetapi sayangnya belum terealisasikan dengan baik.

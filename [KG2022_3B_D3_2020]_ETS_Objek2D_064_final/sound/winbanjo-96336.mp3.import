@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/winbanjo-96336.mp3-aedcc79c599dd61de70838b98a9a06a8.mp3str"
+
+[deps]
+
+source_file="res://sound/winbanjo-96336.mp3"
+dest_files=[ "res://.import/winbanjo-96336.mp3-aedcc79c599dd61de70838b98a9a06a8.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
